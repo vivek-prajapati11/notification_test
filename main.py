@@ -1,7 +1,7 @@
 print("Hello World")
 
 def welcome():
-  print("Welcome")
+    print("Welcome")
 
 print("Outside welcome function")
 welcome()
