@@ -18,26 +18,17 @@ jobs:
           VALIDATE_PYTHON: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-  deploy:
-    name: Notifcation Check
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-     
 
       - name: Notify developers via email
+        if: ${{ always() }}
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com  
-          server_port: 587 
-          username: ${{ secrets.EMAIL_USERNAME }} 
-          password: ${{ secrets.EMAIL_PASSWORD }} 
-          subject: Deployment Notification
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Super-Linter Notification
           body: |
-            The deployment was ${{ job.status }}!
-          from: vivek.ofc11@gmail.com 
-          to: candycrush1419@gmail.com  
+            The Super-Linter job was ${{ job.status }}!
+          from: vivek.ofc11@gmail.com
+          to: candycrush1419@gmail.com
