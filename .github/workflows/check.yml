@@ -35,7 +35,7 @@ jobs:
           server_address: smtp.gmail.com  # Replace with the SMTP server address for Gmail
           server_port: 587  # Replace with the appropriate SMTP server port
           username: ${{ secrets.EMAIL_USERNAME }}  # Add email username as a secret
-          password: ${{ secrets.EMAIL_PASSWORD }}  # Add email password as a secret
+          password: ${{ secrets.EMAIL_PASSWORD }}  # Add email password as a secreta
           subject: Deployment Notification
           body: |
             The deployment was ${{ job.status }}!
