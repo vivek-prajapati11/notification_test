@@ -6,4 +6,4 @@ def welcome():
 
 
 print("Outside welcome function")
-welcome();
+welcome()
