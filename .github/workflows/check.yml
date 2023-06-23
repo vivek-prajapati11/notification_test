@@ -27,17 +27,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # ... other deployment steps go here ...
+     
 
       - name: Notify developers via email
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com  # Replace with the SMTP server address for Gmail
-          server_port: 587  # Replace with the appropriate SMTP server port
-          username: ${{ secrets.EMAIL_USERNAME }}  # Add email username as a secret
-          password: ${{ secrets.EMAIL_PASSWORD }}  # Add email password as a secreta
+          server_address: smtp.gmail.com  
+          server_port: 587 
+          username: ${{ secrets.EMAIL_USERNAME }} 
+          password: ${{ secrets.EMAIL_PASSWORD }} 
           subject: Deployment Notification
           body: |
             The deployment was ${{ job.status }}!
-          from: vivek.ofc11@gmail.com  # Replace with the sender email address
-          to: candycrush1419@gmail.com  # Replace with the recipient email address
+          from: vivek.ofc11@gmail.com 
+          to: candycrush1419@gmail.com  
