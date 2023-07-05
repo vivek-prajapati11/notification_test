@@ -2,7 +2,7 @@ print("Hello World")
 
 
 def welcome():
-    print("Welcome")
+    print("Welcome to python")
 
 
 print("Outside welcome function")
